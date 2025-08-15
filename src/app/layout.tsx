@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import ClientBody from './ClientBody'
 
 export const metadata: Metadata = {
   title: 'Kuper Company - Промышленное насосное оборудование',
@@ -13,7 +14,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ru">
-      <body>{children}</body>
+      <body>
+        <ClientBody>
+          {children}
+        </ClientBody>
+      </body>
     </html>
   )
 }

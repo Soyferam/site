@@ -1,6 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  allowedDevOrigins: ["*.preview.same-app.com"],
   images: {
     unoptimized: true,
     domains: [
@@ -34,4 +33,5 @@ const nextConfig = {
   },
 };
 
+module.exports = nextConfig;
 module.exports = nextConfig;

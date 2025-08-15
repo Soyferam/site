@@ -49,7 +49,12 @@ export default {
           '3': 'hsl(var(--chart-3))',
           '4': 'hsl(var(--chart-4))',
           '5': 'hsl(var(--chart-5))'
-        }
+        },
+        'kuper-yellow': 'var(--kuper-yellow)',
+        'kuper-dark': 'var(--kuper-dark)',
+        'kuper-grey': 'var(--kuper-grey)',
+        'kuper-light-grey': 'var(--kuper-light-grey)',
+        'kuper-dark-grey': 'var(--kuper-dark-grey)',
       },
       borderRadius: {
         lg: 'var(--radius)',
