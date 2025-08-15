@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Gilroy font family */
+@font-face {
+  font-family: 'Gilroy';
+  src: url('https://ext.same-assets.com/3869708485/2420243290.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('https://ext.same-assets.com/3869708485/2733410451.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('https://ext.same-assets.com/3869708485/3241318785.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('https://ext.same-assets.com/3869708485/3324273731.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('https://ext.same-assets.com/3869708485/215323601.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('https://ext.same-assets.com/3869708485/196168745.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('https://ext.same-assets.com/3869708485/3356561977.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --kuper-yellow: #F1D73A;
+  --kuper-dark: #040404;
+  --kuper-grey: #5c5c56;
+  --kuper-light-grey: #dfddd7;
+  --kuper-dark-grey: #333332;
+  --kuper-brown: #8f583d;
+  --kuper-blue-grey: #7a8483;
+  --kuper-slate: #67738c;
+  --kuper-dark-blue: #332c4a;
+  --kuper-dark-green: #374739;
+}
+
+body {
+  font-family: 'Gilroy', sans-serif;
+  color: var(--kuper-dark);
+  background-color: #ffffff;
+}
+
+.bg-kuper-yellow {
+  background-color: var(--kuper-yellow);
+}
+
+.text-kuper-yellow {
+  color: var(--kuper-yellow);
+}
+
+.bg-kuper-dark {
+  background-color: var(--kuper-dark);
+}
+
+.text-kuper-dark {
+  color: var(--kuper-dark);
+}
+
+.bg-kuper-grey {
+  background-color: var(--kuper-grey);
+}
+
+.text-kuper-grey {
+  color: var(--kuper-grey);
+}
+
+.bg-kuper-light-grey {
+  background-color: var(--kuper-light-grey);
+}
+
+.text-kuper-light-grey {
+  color: var(--kuper-light-grey);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--kuper-yellow);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #e6c934;
+}
+
+/* Remove default margin and padding */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom button styles */
+.btn-kuper {
+  background-color: var(--kuper-yellow);
+  color: var(--kuper-dark);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  border: none;
+  padding: 14px 28px;
+}
+
+.btn-kuper:hover {
+  background-color: #e6c934;
+  transform: translateY(-2px);
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Gilroy', sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.hero-title {
+  font-family: 'Gilroy', sans-serif;
+  font-weight: 900;
+  font-size: clamp(2.5rem, 8vw, 4rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--kuper-dark);
+}
+
+.section-number {
+  font-family: 'Gilroy', sans-serif;
+  font-weight: 100;
+  font-size: clamp(4rem, 12vw, 8rem);
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.1);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* Layout utilities */
+.container-kuper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+@media (min-width: 1400px) {
+  .container-kuper {
+    max-width: 1320px;
+  }
+}
+
+/* Navigation styles */
+.nav-item {
+  position: relative;
+  font-weight: 400;
+  color: var(--kuper-dark);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-item:hover {
+  color: var(--kuper-yellow);
+}
+
+.nav-item::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: var(--kuper-yellow);
+  transition: width 0.3s ease;
+}
+
+.nav-item:hover::after {
+  width: 100%;
+}
