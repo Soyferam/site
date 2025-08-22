@@ -1,4 +1,5 @@
 import Header from '@/components/Header'
+import NavigationPanel from '@/components/NavigationPanel'
 import HeroSection from '@/components/HeroSection'
 import NewsSection from '@/components/NewsSection'
 import ServicesSection from '@/components/ServicesSection'
@@ -11,6 +12,7 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       <Header />
+      <NavigationPanel />
       <HeroSection />
       <NewsSection />
       <ServicesSection />

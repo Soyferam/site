@@ -32,7 +32,7 @@ const Footer = () => {
 
   return (
     <footer id="contacts" className="bg-kuper-dark-grey text-white relative">
-      <div className="container-kuper py-20">
+      <div className="container-kuper py-20 lg:ml-64">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
 
           {/* Contact Form */}
@@ -202,16 +202,7 @@ const Footer = () => {
               </span>
             </div>
 
-            <div className="text-white/40 text-xs">
-              <a
-                href="https://t.me/tr3m0r"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-kuper-yellow transition-colors"
-              >
-                Разработка: tr3m0r
-              </a>
-            </div>
+
           </div>
         </div>
       </div>

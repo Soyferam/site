@@ -33,7 +33,7 @@ const ProductsSection = () => {
 
   return (
     <section id="products" className="py-20 bg-kuper-light-grey relative">
-      <div className="container-kuper">
+      <div className="container-kuper lg:ml-64">
         {/* Section Number */}
         <div className="absolute left-0 top-0 section-number opacity-5">04</div>
 

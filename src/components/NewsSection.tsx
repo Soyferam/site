@@ -37,7 +37,7 @@ const NewsSection = () => {
 
   return (
     <section id="news" className="py-20 bg-white relative">
-      <div className="container-kuper">
+      <div className="container-kuper lg:ml-64">
         {/* Section Number */}
         <div className="absolute left-0 top-0 section-number opacity-5">02</div>
 

@@ -1,56 +1,53 @@
 'use client'
 
 import Image from 'next/image'
-import Link from 'next/link'
 
 const HeroSection = () => {
-  const navigationItems = [
-    { id: '01', label: 'КОМПАНИЯ', href: '#company' },
-    { id: '02', label: 'СОБЫТИЯ', href: '#news' },
-    { id: '03', label: 'УСЛУГИ', href: '#services' },
-    { id: '04', label: 'ПРОДУКЦИЯ', href: '#products' },
-    { id: '05', label: 'ГЕОГРАФИЯ', href: '#geography' },
-    { id: '06', label: 'ПАРТНЕРЫ', href: '#partners' },
-    { id: '07', label: 'КОНТАКТЫ', href: '#contacts' },
-  ]
-
   return (
-    <section className="relative min-h-screen bg-kuper-light-grey overflow-hidden pt-20">
-      <div className="container-kuper h-full">
+    <section className="relative min-h-screen overflow-hidden pt-20">
+      {/* Background Video */}
+      <div className="absolute inset-0 z-0">
+        <video
+          className="w-full h-full object-cover"
+          autoPlay
+          loop
+          muted
+          playsInline
+        >
+          <source src="/videos/hero-video.mp4" type="video/mp4" />
+        </video>
+        {/* Dark overlay to make text readable */}
+        <div className="absolute inset-0 bg-black/30"></div>
+      </div>
+
+      <div className="container-kuper h-full relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 min-h-[calc(100vh-80px)] items-center">
 
-          {/* Left Navigation */}
-          <div className="hidden lg:block lg:col-span-2">
-            <nav className="flex flex-col space-y-6">
-              {navigationItems.map((item) => (
-                <Link
-                  key={item.id}
-                  href={item.href}
-                  className="group flex items-center space-x-3 text-sm hover:text-kuper-yellow transition-colors"
-                >
-                  <span className="text-kuper-yellow font-semibold">{item.id}.</span>
-                  <span className="font-medium text-kuper-dark group-hover:text-kuper-yellow">
-                    {item.label}
-                  </span>
-                </Link>
-              ))}
-            </nav>
 
-            {/* Copyright */}
-            <div className="mt-16 text-xs text-kuper-grey">
-              <p>© 2025 ООО</p>
-              <p>«Купер»</p>
-            </div>
-          </div>
 
           {/* Main Content */}
-          <div className="lg:col-span-6 flex flex-col justify-center space-y-8 z-10">
+          <div className="lg:col-span-8 flex flex-col justify-center space-y-8 z-10 lg:ml-40">
             <div>
-              <h1 className="hero-title mb-6">
-                МЫ ПРОИЗВОДИМ
-                <br />
-                НА СОБСТВЕННЫХ МОЩНОСТЯХ
-              </h1>
+              <div className="bg-kuper-yellow/90 backdrop-blur-sm px-3 py-3 rounded-lg shadow-lg border border-kuper-yellow mb-6 inline-block">
+                <h1 style={{color: 'white', fontSize: '2rem', lineHeight: '1.2', margin: '0', padding: '0', fontFamily: 'Gilroy, sans-serif', fontWeight: '900'}}>
+                  МЫ ПРОИЗВОДИМ
+                  <br />
+                  НА СОБСТВЕННЫХ МОЩНОСТЯХ
+                </h1>
+              </div>
+
+              {/* Yellow plates under the title */}
+              <div className="flex justify-between mb-8 max-w-lg">
+                <div className="bg-kuper-yellow/80 backdrop-blur-sm px-4 py-2 rounded-lg shadow-md border border-kuper-yellow">
+                  <span className="text-white font-semibold text-sm">ПРОИЗВОДСТВО</span>
+                </div>
+                <div className="bg-kuper-yellow/80 backdrop-blur-sm px-4 py-2 rounded-lg shadow-md border border-kuper-yellow">
+                  <span className="text-white font-semibold text-sm">МОЩНОСТИ</span>
+                </div>
+                <div className="bg-kuper-yellow/80 backdrop-blur-sm px-4 py-2 rounded-lg shadow-md border border-kuper-yellow">
+                  <span className="text-white font-semibold text-sm">ИННОВАЦИИ</span>
+                </div>
+              </div>
 
               <button className="btn-kuper inline-flex items-center space-x-2 group">
                 <span>КАТАЛОГ ПРОДУКЦИИ</span>
@@ -69,11 +66,11 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* Robot Image */}
+          {/* Right side content */}
           <div className="lg:col-span-4 relative flex justify-center items-center">
             <div className="relative w-full max-w-md">
               {/* Main Equipment Image */}
-              <div className="relative w-full h-96 bg-gradient-to-br from-gray-100 to-gray-200 rounded-lg overflow-hidden">
+              <div className="relative w-full h-96 bg-gradient-to-br from-gray-100/20 to-gray-200/20 rounded-lg overflow-hidden backdrop-blur-sm">
                 <Image
                   src="https://ext.same-assets.com/3869708485/822817378.jpeg"
                   alt="Промышленное насосное оборудование"

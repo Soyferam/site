@@ -27,7 +27,7 @@ const ServicesSection = () => {
 
   return (
     <section id="services" className="py-20 bg-kuper-yellow relative overflow-hidden">
-      <div className="container-kuper">
+      <div className="container-kuper lg:ml-64">
         {/* Section Number */}
         <div className="absolute left-0 top-0 section-number opacity-10 text-kuper-dark">03</div>
 
@@ -36,16 +36,16 @@ const ServicesSection = () => {
           {services.map((service, index) => (
             <div key={index} className="group">
               <Link href={service.link}>
-                <div className="relative overflow-hidden bg-white/10 backdrop-blur-sm border border-kuper-dark/20 hover:bg-white/20 transition-all duration-300 h-64">
+                <div className="relative overflow-hidden bg-white/10 backdrop-blur-sm border border-kuper-dark/20 hover:bg-white/20 transition-all duration-300 h-80">
 
                   {/* Background Image */}
-                  <div className="absolute inset-0">
+                  <div className="absolute inset-0 flex items-center justify-center">
                     <Image
                       src={service.image}
                       alt={service.title}
-                      width={400}
-                      height={300}
-                      className="w-full h-full object-cover opacity-70 group-hover:opacity-50 transition-opacity duration-300"
+                      width={300}
+                      height={400}
+                      className="h-full w-auto object-contain opacity-70 group-hover:opacity-50 transition-opacity duration-300"
                     />
                     <div className="absolute inset-0 bg-kuper-dark/40"></div>
                   </div>
