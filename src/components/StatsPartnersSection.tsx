@@ -15,7 +15,7 @@ const StatsPartnersSection = () => {
   ]
 
   return (
-    <section className="py-20 bg-kuper-dark relative overflow-hidden">
+    <section id="partners" className="py-20 bg-kuper-dark relative overflow-hidden">
       <div className="container-kuper lg:ml-64">
         {/* Section Number */}
         <div className="absolute left-0 top-0 section-number opacity-10 text-white">05</div>
@@ -24,13 +24,19 @@ const StatsPartnersSection = () => {
 
           {/* Stats Section */}
           <div className="text-center lg:text-left">
-            <div className="flex items-baseline justify-center lg:justify-start space-x-4 mb-6">
-              <div className="flex items-center space-x-2">
+            <div className="flex items-center justify-center lg:justify-start space-x-4 mb-6">
+              <div className="flex items-start space-x-3">
                 {/* Kuper Logo */}
-                <div className="w-16 h-16 bg-kuper-yellow flex items-center justify-center">
-                  <span className="text-kuper-dark font-bold text-2xl">K</span>
+                <div className="w-24 h-24 flex items-center justify-center -mt-2">
+                  <Image
+                    src="/images/logo.png"
+                    alt="Kuper Logo"
+                    width={96}
+                    height={96}
+                    className="w-full h-full object-contain"
+                  />
                 </div>
-                <span className="text-kuper-yellow text-lg font-semibold">+</span>
+                <span className="text-kuper-yellow text-3xl font-bold mt-4">+</span>
               </div>
 
               <div className="text-kuper-yellow">
