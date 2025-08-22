@@ -109,7 +109,7 @@ const HeroSection = () => {
 
               {/* AI Badge */}
               <div className="absolute -top-4 -right-4 w-16 h-16 border-2 border-kuper-yellow bg-white rounded-full flex items-center justify-center shadow-lg">
-                <span className="text-kuper-dark font-bold text-sm">AI</span>
+                <span className="text-kuper-dark font-bold text-sm"></span>
               </div>
 
               {/* Decorative industrial elements */}
